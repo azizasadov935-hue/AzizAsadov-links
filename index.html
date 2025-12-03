@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<title>KundalikMobile — Kirish</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg,#1A73E8,#003F7D);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+    }
+
+    .card{
+        width:85%;
+        max-width:380px;
+        background:white;
+        border-radius:22px;
+        padding:28px;
+        box-shadow:0 10px 25px rgba(0,0,0,0.2);
+        animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn{
+        from{opacity:0; transform:translateY(20px);}
+        to{opacity:1; transform:translateY(0);}
+    }
+
+    .title{
+        font-size:26px;
+        font-weight:bold;
+        color:#243B6B;
+        text-align:center;
+        margin-bottom:10px;
+    }
+
+    input{
+        width:100%;
+        padding:12px;
+        margin:8px 0;
+        border-radius:12px;
+        border:1px solid #ddd;
+        font-size:15px;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        margin-top:12px;
+        background:linear-gradient(135deg,#1A73E8,#003F7D);
+        border:none;
+        border-radius:14px;
+        color:white;
+        font-size:17px;
+        font-weight:bold;
+    }
+
+    .ai-banner{
+        margin-top:15px;
+        padding:10px;
+        background:rgba(255,255,255,0.2);
+        border-radius:14px;
+        color:white;
+        text-align:center;
+        backdrop-filter:blur(6px);
+    }
+
+    .footer{
+        position:absolute;
+        bottom:10px;
+        width:100%;
+        text-align:center;
+        color:white;
+        opacity:0.6;
+        font-size:13px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="title">KundalikMobile</div>
+
+    <input type="text" placeholder="Login">
+    <input type="password" placeholder="Parol">
+
+    <button>Kirish</button>
+
+    <div class="ai-banner">
+        🤖 AI avtologin yoqilgan — internet bo‘lsa avtomatik kiradi
+    </div>
+</div>
+
+<div class="footer">Powered by SmartSchool AI System</div>
+
+</body>
+</html>

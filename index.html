@@ -2,120 +2,140 @@
 <html lang="uz">
 <head>
 <meta charset="UTF-8">
-<title>KundalikMobile — Kirish</title>
+<title>KundalikMobile — AI Login</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
-    /* Fon va umumiy stil */
     body {
         margin:0;
         padding:0;
-        font-family: 'Segoe UI', Arial, sans-serif;
+        font-family: 'Roboto', sans-serif;
         height:100vh;
         display:flex;
         justify-content:center;
         align-items:center;
-        background: url('https://images.unsplash.com/photo-1605902711622-cfb43c4431d0?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
-        background-size: cover;
+        background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
         position: relative;
+        overflow:hidden;
     }
 
-    /* Overlay fon uchun */
+    /* Futuristik glowing background anim */
     body::before {
         content:"";
         position:absolute;
-        top:0; left:0;
-        width:100%; height:100%;
-        background: rgba(0,0,50,0.5);
+        top:-50%; left:-50%;
+        width:200%; height:200%;
+        background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1), transparent 70%);
+        animation: move 10s linear infinite;
         z-index:0;
     }
 
-    /* Login kartochka */
+    @keyframes move {
+        0% {transform: rotate(0deg);}
+        50% {transform: rotate(180deg);}
+        100% {transform: rotate(360deg);}
+    }
+
     .card {
         position: relative;
         z-index:1;
         width:90%;
         max-width:400px;
-        background: rgba(255,255,255,0.95);
-        border-radius:25px;
-        padding:30px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        background: rgba(20,25,40,0.95);
+        border-radius:20px;
+        padding:35px;
+        box-shadow: 0 0 20px rgba(0,255,255,0.3), 0 0 40px rgba(0,255,255,0.2);
         text-align:center;
-        animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn{
-        from {opacity:0; transform: translateY(20px);}
-        to {opacity:1; transform: translateY(0);}
+        color:white;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(0,255,255,0.2);
     }
 
     .title {
-        font-size:28px;
-        font-weight:bold;
-        color:#243B6B;
+        font-size:30px;
+        font-weight:700;
         margin-bottom:10px;
+        letter-spacing:1px;
+        color: #00ffff;
+        text-shadow: 0 0 10px #00ffff;
     }
 
     .subtitle {
         font-size:14px;
-        color:#555;
+        color:#aaa;
         margin-bottom:25px;
     }
 
     input {
         width:100%;
         padding:14px;
-        margin:10px 0;
+        margin:12px 0;
         border-radius:12px;
-        border:1px solid #ddd;
+        border:1px solid #00ffff;
+        background: rgba(0,255,255,0.05);
+        color:white;
         font-size:15px;
+        outline:none;
+        transition:0.3s;
+    }
+
+    input:focus {
+        box-shadow: 0 0 10px #00ffff;
+        border-color:#00ffff;
+        background: rgba(0,255,255,0.1);
     }
 
     button {
         width:100%;
         padding:14px;
-        margin-top:15px;
-        background: linear-gradient(135deg,#1A73E8,#003F7D);
+        margin-top:20px;
+        background: linear-gradient(135deg,#00ffff,#00aaff);
         border:none;
         border-radius:16px;
         color:white;
         font-size:17px;
         font-weight:bold;
         cursor:pointer;
-        transition: 0.3s;
+        transition:0.3s;
+        box-shadow:0 0 10px #00ffff,0 0 20px #00aaff;
     }
 
     button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+        box-shadow:0 0 20px #00ffff,0 0 30px #00aaff;
     }
 
     .ai-banner {
-        margin-top:18px;
-        padding:10px;
-        background: rgba(26,115,232,0.2);
+        margin-top:20px;
+        padding:12px;
+        background: rgba(0,255,255,0.1);
         border-radius:14px;
-        color:white;
+        color:#00ffff;
         font-weight:bold;
         text-align:center;
+        box-shadow:0 0 10px #00ffff inset;
     }
 
     .footer {
         position:absolute;
-        bottom:10px;
+        bottom:12px;
         width:100%;
         text-align:center;
-        color:white;
-        opacity:0.7;
+        color:#00ffff;
+        opacity:0.6;
         font-size:13px;
+        text-shadow:0 0 5px #00ffff;
     }
-
 </style>
 </head>
 
 <body>
 <div class="card">
     <div class="title">KundalikMobile</div>
-    <div class="subtitle">Smart School Assistant — AI Boosted</div>
+    <div class="subtitle">Smart School AI Login</div>
 
     <input type="text" placeholder="Login">
     <input type="password" placeholder="Parol">
@@ -128,5 +148,6 @@
 </div>
 
 <div class="footer">Powered by SmartSchool AI System</div>
+
 </body>
 </html>
